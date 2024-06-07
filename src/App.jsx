@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Todos from './components/Todos';  // Lalukan Import
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -26,14 +27,21 @@ function App() {
 
  
   return (
-    <div>
-      <h1>My Todo List</h1>
-      {/* Gunakan method map di sini */}
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+     // Menambah CSS
+     <div style={{ textAlign: 'center', padding: '12px' }}>
+     <h1 style={{fontSize: '36px'}}>My Todo List</h1>
+      <Todos todos={todos} />
+      {/* Menampilkan component Todos */}
     </div>
   )
 }
-
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
+}
 export default App
