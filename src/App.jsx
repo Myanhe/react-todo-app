@@ -27,13 +27,21 @@ function App() {
 
  
   return (
-    <div>
-      <h1>My Todo List</h1>
-      {/* Berikan data-nya ke component Todos */}
+     // Menambah CSS
+     <div style={{ textAlign: 'center', padding: '12px' }}>
+     <h1 style={{fontSize: '36px'}}>My Todo List</h1>
       <Todos todos={todos} />
       {/* Menampilkan component Todos */}
     </div>
   )
 }
-
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
+}
 export default App
